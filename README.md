@@ -12,7 +12,7 @@ The ***n*** elements are already in order and so the program must only run one p
 The ***n*** elements are in reverse order and so the program must process ***n*** passes:
 <br>***O*(*n<sup>2*)**
 
-This program also "graphs" each pass and states the number of swaps and passes required:
+This program also "graphs" each pass and states the number of swaps and passes required like so:
 ```
 Please write the number of elements you want sorted:
 4
