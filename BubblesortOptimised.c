@@ -2,18 +2,18 @@
 
 void Swap(int *i, int *j);
 void graph(int n);
-int elements, swap, pass;
+int swap, pass, elements, *values;
 
 int main(void)
 {
 // Grab elements and values from user
 int j, i;
    printf("Please write the number of elements you want sorted: \n");
-   scanf("%d",&elements);
+   scanf("%d", &elements);
    printf("Enter %d integers (spaced): \n", elements);
-int values[elements];
+   values = (int*) malloc(elements * sizeof(double));
    for(int i = 0; i < elements; i++) {
-          scanf("%d",&values[i]);
+          scanf("%d", &values[i]);
    }
 
 // Bubble Sorter
@@ -36,6 +36,7 @@ for (i = 0; i < elements; i++) {
         printf(" %d", values[i]);
     }
 printf("\nThis required %d swap(s) and %d pass(es).", swap, pass);
+free(values);
 }
 
 // Swap Function
