@@ -6,7 +6,7 @@ void graph(int n);
 static int swap, pass;
 
 int main(void) {
-//Grabs the number of elements and the values from the user
+// Grabs the number of elements and the values from the user
    int elements;
 
    printf("Please write the number of elements you want sorted: \n");
@@ -21,13 +21,13 @@ int main(void) {
           scanf("%d", &values[i]);
    }
 
-//Sorts values using the bubblesorting algorithm
+// Sorts values using the bubblesorting algorithm
    for(int i = elements - 1; i > 0; i--) {
       for(int j = 0; j < i; j++) {
          Swap(&values[j], &values[j + 1]);      
     }
 
-//Graphs the current values in this pass
+// Graphs the current values in this pass
     for (int k = 0; k < elements; k++) {
         printf("%d ", values[k]);
         graph(values[k]);
@@ -35,7 +35,7 @@ int main(void) {
     pass++;
     printf("--------------------------\n");
 }
-//Prints the final bubble sorted values as well as the swaps and passes
+// Prints the final bubble sorted values as well as the swaps and passes
     printf("Your sorted values are: ");
     for (int i = 0; i < elements; i++) {
         printf(" %d", values[i]);
@@ -44,7 +44,7 @@ int main(void) {
     free(values);
 }
 
-//Swaps 2 values if the first is greater than the second
+// Swaps 2 values if the first is greater than the second
 void Swap(int *i, int *j) {
     if(*i > *j) {
         int temp = *i;
@@ -53,7 +53,7 @@ void Swap(int *i, int *j) {
         swap++;
     }
 }
-//Graphing Function - Prints a graph consisting of "_" as the bars
+// Graphing Function - Prints a graph consisting of "_" as the bars
 void graph(int n) {
     for (int a = 0; a < n - 1; a++) {
         printf("_");
